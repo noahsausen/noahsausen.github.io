@@ -39,16 +39,16 @@ function Details(){
 function LinkContainer() {
   return (
     <div className="LinkContainer">
-      <Link icon={githubIcon} url="https://github.com/noahsausen" name="Github"/>
-      <Link icon={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
-      <Link icon={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
+      <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
+      <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
+      <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
     </div>
   );
 }
 
-function Link({icon, url, name, extraClass=""}) {
+function Link({iconFile, url, name, extraClass=""}) {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer"><img className={"LinkIcon" + extraClass} src={icon} alt={name + " logo"}/></a>
+    <a href={url} target="_blank" rel="noopener noreferrer"><img className={"LinkIcon" + extraClass} src={iconFile} alt={name + " logo"}/></a>
   );
 }
 
