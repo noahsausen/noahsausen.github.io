@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .App {
   text-align: center;
-  /*background-color: hsl(0, 0%, 5%);*/
+  background-color: hsl(0, 0%, 5%);
   color: hsl(0, 0%, 90%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.5em;
+  padding: 2.5em;
+}
+
+.App * {
+  margin: 0;
 }
 
 .Heading {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
-  padding: 1.5em;
-  margin: 0;
 }
 
 .Details {
@@ -27,7 +32,6 @@
 }
 
 .Details * {
-  margin: 0;
   color: hsl(0, 0%, 90%);
   text-decoration: none;
 }
@@ -37,10 +41,8 @@
   flex-direction: row;
   gap: 3em;
   flex-wrap: wrap;
-  width: 80%;
   justify-content: center;
   align-items: center;
-  padding: 3em;
 }
 
 .LinkIcon {
@@ -53,9 +55,10 @@
 }
 
 .Footer {
-  padding: 2.5em;
-  padding-top: 0;
-  margin: 0;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
 }
 
 /*.App-logo {*/
