@@ -32,6 +32,8 @@ function Details(){
       <p>CSS</p>
       <p>Java</p>
       <p>Python</p>
+      <p>Sound Engineering</p>
+      <a href="https://flipper.net"><p>Pentesting</p></a>
     </div>
   );
 }
@@ -54,6 +56,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {new Date().getFullYear()} Noah Sausen</p>
+    <p className="Footer">© {new Date().getFullYear()} Noah Sausen - Built with React</p>
   );
 }

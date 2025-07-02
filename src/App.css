@@ -29,6 +29,8 @@
 
 .Details * {
   margin: 0;
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
 }
 
 .LinkContainer {
@@ -52,9 +54,9 @@
 }
 
 .Footer {
-  justify-content: flex-end;
-  margin-top: auto;
-  padding: 1.5em;
+  padding: 2.5em;
+  padding-top: 0;
+  margin: 0;
 }
 
 /*.App-logo {*/
