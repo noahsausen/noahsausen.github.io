@@ -1,7 +1,7 @@
 {
   "name": "noahsausen.github.io",
   "version": "0.1.0",
-  "homepage": "https://noahsausen.github.io/my-react-app",
+  "homepage": "https://noahsausen.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
