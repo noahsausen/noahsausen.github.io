@@ -62,6 +62,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {new Date().getFullYear()} Noah Sausen - Built with React<p>update 3</p></p>
+    <p className="Footer">© {new Date().getFullYear()} Noah Sausen - Built with React<p>update 4</p></p>
   );
 }
