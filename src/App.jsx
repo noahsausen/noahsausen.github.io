@@ -2,6 +2,7 @@ import './App.css';
 import githubIcon from "./assets/github.svg"
 import emailIcon from "./assets/email.svg"
 import instagramIcon from "./assets/instagram.svg"
+import discordIcon from "./assets/discord.svg"
 
 document.body.style.background = 'hsl(0, 0%, 5%)';
 
@@ -41,9 +42,14 @@ function Details(){
 function LinkContainer() {
   return (
     <div className="LinkContainer">
-      <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
-      <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
-      <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
+      <div className="LinkContainer">
+        <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
+        <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
+      </div>
+      <div className="LinkContainer">
+        <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
+        <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>
+      </div>
     </div>
   );
 }
