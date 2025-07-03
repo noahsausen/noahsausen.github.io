@@ -27,6 +27,7 @@ function Heading() {
 function Details(){
   return (
     <div className="Details">
+      <h3 className="DetailsTitle">Skills</h3>
       <p>React</p>
       <p>JavaScript</p>
       <p>HTML</p>
@@ -41,14 +42,17 @@ function Details(){
 
 function LinkContainer() {
   return (
-    <div className="LinkContainer">
+    <div className="Connect">
+      <h3 className="ConnectTitle">Connect</h3>
       <div className="LinkContainer">
-        <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
-        <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
-      </div>
-      <div className="LinkContainer">
-        <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
-        <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>
+        <div className="LinkContainer">
+          <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
+          <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
+        </div>
+        <div className="LinkContainer">
+          <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
+          <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>
+        </div>
       </div>
     </div>
   );
@@ -62,6 +66,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {new Date().getFullYear()} Noah Sausen - Built with React</p>
+    <p className="Footer">© {new Date().getFullYear()} Noah Sausen • Built with React</p>
   );
 }

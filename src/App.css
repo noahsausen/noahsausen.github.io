@@ -17,7 +17,7 @@ body, html, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5em;
+  gap: 1.5em;
   padding: 1em 2.5em;
 }
 
@@ -38,11 +38,39 @@ body, html, #root {
   font-weight: 400;
   font-style: normal;
   font-size: 2em;
+  background-color: hsl(0, 0%, 10%);
+  padding: 0.8em;
+  border-radius: 2em;
 }
 
 .Details * {
   color: hsl(0, 0%, 90%);
   text-decoration: none;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.DetailsTitle{
+  font-size: 1.4em;
+  padding-bottom: 0.2em;
+}
+
+.Connect {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7em;
+  background-color: hsl(0, 0%, 10%);
+  padding: 2em 2.5em;
+  border-radius: 3.5em;
+}
+
+.ConnectTitle {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.3em;
+  line-height: 0.7;
 }
 
 .LinkContainer {
@@ -52,6 +80,7 @@ body, html, #root {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
 }
 
 .LinkIcon {
