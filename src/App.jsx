@@ -1,18 +1,45 @@
 import './App.css';
-import githubIcon from "./assets/github.svg"
-import emailIcon from "./assets/email.svg"
-import instagramIcon from "./assets/instagram.svg"
-import discordIcon from "./assets/discord.svg"
+import { motion } from "motion/react";
+
+import githubIcon from "./assets/github.svg";
+import emailIcon from "./assets/email.svg";
+import instagramIcon from "./assets/instagram.svg";
+import discordIcon from "./assets/discord.svg";
+
+const motionVariants = {
+  app: {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.3
+      }
+    }
+  },
+  sections: {
+    hidden: {opacity: 0},
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.7 }
+    }
+  },
+  heading: {
+    hidden: {opacity: 0},
+    visible: {
+      opacity: 1,
+      transition: {duration: 1}
+    }
+  }
+};
 
 export default function App() {
   return (
-    <div className="App">
-      <title>Noah Sausen</title>
-      <Heading/>
-      <Details/>
-      <LinkContainer/>
-      <Footer/>
-    </div>
+    <motion.div className="App" variants={motionVariants.app} initial="hidden" animate="visible">
+      <motion.div variants={motionVariants.heading}><Heading/></motion.div>
+      <motion.div variants={motionVariants.sections}><Details/></motion.div>
+      <motion.div variants={motionVariants.sections}><LinkContainer/></motion.div>
+      <motion.div variants={motionVariants.sections}><Footer/></motion.div>
+    </motion.div>
   );
 }
 
