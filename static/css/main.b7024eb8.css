@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);@import url(https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap);@import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;margin:0}code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}#root,body,html{background:#0d0d0d;justify-content:center;min-height:100%}#root,.App,body,html{align-items:center;display:flex;flex-direction:column}.App{background-color:#0d0d0d;color:#e6e6e6;gap:1.5em;padding:1em 2.5em;text-align:center}.App *{margin:0}.Heading{font-family:Press Start\ 2P,system-ui;font-style:normal;font-weight:400;line-height:1.3}.Details{background-color:#1a1a1a;border-radius:2em;display:flex;flex-direction:column;font-family:Pixelify Sans,sans-serif;font-optical-sizing:auto;font-size:2em;font-style:normal;font-weight:400;padding:.8em}.Details *{color:#e6e6e6;line-height:1.2;text-decoration:none}.Details h3{font-size:1.4em;padding-bottom:.2em}.Connect{background-color:#1a1a1a;border-radius:3.5em;display:flex;flex-direction:column;gap:1.7em;padding:2em 2.5em}.Connect h3{font-family:Pixelify Sans,sans-serif;font-optical-sizing:auto;font-size:2.3em;font-style:normal;font-weight:700;line-height:.7}.LinkContainer{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;font-size:1em;gap:2.5em;justify-content:center}.LinkIcon{height:2em;width:auto}.emailPadding{height:1.6em}.Footer{font-family:VT323,monospace;font-size:1em;font-style:normal;font-weight:400}
+
+/*!*@keyframes App-logo-spin {*!*/
+/*!*  from {*!*/
+/*!*    transform: rotate(0deg);*!*/
+/*!*  }*!*/
+/*!*  to {*!*/
+/*!*    transform: rotate(360deg);*!*/
+/*!*  }*!*/
+/*!*}*!*/
+
+/*!*@media (prefers-reduced-motion: no-preference) {*!*/
+/*!*  .App-logo {*!*/
+/*!*    animation: App-logo-spin infinite 20s linear;*!*/
+/*!*  }*!*/
+/*!*}*!*/
+/*# sourceMappingURL=main.b7024eb8.css.map*/
