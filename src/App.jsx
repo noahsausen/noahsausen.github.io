@@ -68,6 +68,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {seconds} Noah Sausen • Built with React</p>
+    <p className="Footer">© {new Date().getSeconds()} Noah Sausen • Built with React 1</p>
   );
 }
