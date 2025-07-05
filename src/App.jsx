@@ -4,7 +4,8 @@ import emailIcon from "./assets/email.svg"
 import instagramIcon from "./assets/instagram.svg"
 import discordIcon from "./assets/discord.svg"
 
-document.body.style.background = 'hsl(0, 0%, 5%)';
+const year = new Date().getFullYear();
+const seconds = new Date().getSeconds();
 
 export default function App() {
   return (
@@ -27,13 +28,14 @@ function Heading() {
 function Details(){
   return (
     <div className="Details">
-      <h3 className="DetailsTitle">Skills</h3>
+      <h3>Skills</h3>
       <p>React</p>
       <p>JavaScript</p>
       <p>HTML</p>
       <p>CSS</p>
       <p>Java</p>
       <p>Python</p>
+      <a href="https://jellyfishbbhs.com/"><p>Robotics</p></a>
       <p>Sound Engineering</p>
       <a href="https://flipper.net"><p>Pentesting</p></a>
     </div>
@@ -43,7 +45,7 @@ function Details(){
 function LinkContainer() {
   return (
     <div className="Connect">
-      <h3 className="ConnectTitle">Connect</h3>
+      <h3>Connect</h3>
       <div className="LinkContainer">
         <div className="LinkContainer">
           <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
@@ -66,6 +68,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {new Date().getFullYear()} Noah Sausen • Built with React</p>
+    <p className="Footer">© {seconds} Noah Sausen • Built with React</p>
   );
 }
