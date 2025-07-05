@@ -11,9 +11,29 @@
     name="description"
     content="Noah Sausen's website"
   />
+  <style>
+    body { background-color: hsl(0, 0%, 5%) }
+    #content {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: hsl(0, 0%, 90%);
+    }
+
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById("content").style.display = 'flex';
+      }, 1000);
+    });
+  </script>
 </head>
 <body>
-<p>Error 404: Page not found</p>
-<a href="https://noahsausen.github.io">Return Home</a>
+  <div id="content">
+    <h1>Error 404: Page not found</h1>
+    <h1><a href="https://noahsausen.github.io">Return Home</a></h1>
+  </div>
 </body>
 </html>
