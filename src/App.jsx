@@ -4,9 +4,6 @@ import emailIcon from "./assets/email.svg"
 import instagramIcon from "./assets/instagram.svg"
 import discordIcon from "./assets/discord.svg"
 
-const year = new Date().getFullYear();
-const seconds = new Date().getSeconds();
-
 export default function App() {
   return (
     <div className="App">
@@ -68,6 +65,6 @@ function Link({iconFile, url, name, extraClass=""}) {
 
 function Footer() {
   return (
-    <p className="Footer">© {new Date().getSeconds()} Noah Sausen • Built with React 1</p>
+    <p className="Footer">© {new Date().getFullYear()} Noah Sausen • Built with React</p>
   );
 }

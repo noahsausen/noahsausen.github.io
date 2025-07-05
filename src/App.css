@@ -54,7 +54,8 @@ body, html, #root {
 
 .Details h3 {
   font-size: 1.4em;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.3em;
+  line-height: 0.8;
 }
 
 .Connect {
@@ -62,7 +63,7 @@ body, html, #root {
   flex-direction: column;
   gap: 1.7em;
   background-color: hsl(0, 0%, 10%);
-  padding: 2em 2.5em;
+  padding: 1.8em 2.5em;
   border-radius: 3.5em;
 }
 
@@ -100,23 +101,3 @@ body, html, #root {
   font-style: normal;
   font-size: 1em;
 }
-
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
-
-/*!*@keyframes App-logo-spin {*!*/
-/*!*  from {*!*/
-/*!*    transform: rotate(0deg);*!*/
-/*!*  }*!*/
-/*!*  to {*!*/
-/*!*    transform: rotate(360deg);*!*/
-/*!*  }*!*/
-/*!*}*!*/
-
-/*!*@media (prefers-reduced-motion: no-preference) {*!*/
-/*!*  .App-logo {*!*/
-/*!*    animation: App-logo-spin infinite 20s linear;*!*/
-/*!*  }*!*/
-/*!*}*!*/
