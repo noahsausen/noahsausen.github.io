@@ -12,7 +12,7 @@ const motionVariants = {
     visible: {
       transition: {
         delayChildren: 0.4,
-        staggerChildren: 0.3
+        staggerChildren: 0.2
       }
     }
   },
