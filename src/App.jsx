@@ -1,10 +1,13 @@
 import './App.css';
 import { motion } from "motion/react";
+import {useState} from "react";
 
 import githubIcon from "./assets/github.svg";
 import emailIcon from "./assets/email.svg";
 import instagramIcon from "./assets/instagram.svg";
 import discordIcon from "./assets/discord.svg";
+
+import remarksThumb from "./assets/remarks.png";
 
 const motionVariants = {
   app: {
@@ -36,9 +39,15 @@ export default function App() {
   return (
     <motion.div className="App" variants={motionVariants.app} initial="hidden" animate="visible">
       <motion.div variants={motionVariants.heading}><Heading/></motion.div>
-      <motion.div variants={motionVariants.sections}><Details/></motion.div>
-      <motion.div variants={motionVariants.sections}><LinkContainer/></motion.div>
-      <motion.div variants={motionVariants.sections}><Footer/></motion.div>
+      <div className="ModContainer">
+        <motion.div variants={motionVariants.sections}><Skills/></motion.div>
+        <div className="ModColumn">
+          <motion.div variants={motionVariants.sections}><Connect/></motion.div>
+          <motion.div variants={motionVariants.sections}><Projects/></motion.div>
+          <motion.div variants={motionVariants.sections}><Footer/></motion.div>
+        </div>
+      </div>
+
     </motion.div>
   );
 }
@@ -49,11 +58,12 @@ function Heading() {
   );
 }
 
-function Details(){
+function Skills(){
   return (
-    <div className="Details">
+    <div className="Skills">
       <h3>Skills</h3>
       <p>React</p>
+      <p>Express</p>
       <p>JavaScript</p>
       <p>HTML</p>
       <p>CSS</p>
@@ -66,7 +76,7 @@ function Details(){
   );
 }
 
-function LinkContainer() {
+function Connect() {
   return (
     <div className="Connect">
       <h3>Connect</h3>
@@ -87,6 +97,31 @@ function LinkContainer() {
 function Link({iconFile, url, name, extraClass=""}) {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer"><img className={"LinkIcon" + extraClass} src={iconFile} alt={name + " logo"}/></a>
+  );
+}
+
+function Projects() {
+  return (
+    <div className="Projects">
+      <h3>Projects</h3>
+      <Project name="Remarks" thumbnail={remarksThumb} urlApp="https://remarks-app.vercel.app" urlCode="https://github.com/noahsausen/Remarks"/>
+    </div>
+  );
+}
+
+function Project({name, thumbnail, urlApp, urlCode}) {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <div className="Project" style={{backgroundImage: `url(${thumbnail})`,}} onClick={() => setVisible(!visible)} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
+      <div className={`ProjectOptions fade-element ${visible ? "visible" : ""}`} id={name + "Options"}>
+        <h4>Remarks</h4>
+        <div className="ProjectOptionsButtons">
+          <a href={urlApp} target="_blank" rel="noopener noreferrer">App</a>
+          <a href={urlCode} target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </div>
+    </div>
   );
 }
 
