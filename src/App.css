@@ -162,7 +162,6 @@ body, html, #root {
 
 .ProjectOptions p {
   font-size: 1.21em;
-  padding-bottom: 0.1em;
 }
 
 .ProjectOptionsButtons {
@@ -171,6 +170,7 @@ body, html, #root {
   gap: 0.5em;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0.22em;
 }
 
 .ProjectOptionsButtons a {
