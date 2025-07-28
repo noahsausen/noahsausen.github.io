@@ -160,6 +160,11 @@ body, html, #root {
   gap: 0.5em;
 }
 
+.ProjectOptions p {
+  font-size: 1.21em;
+  padding-bottom: 0.1em;
+}
+
 .ProjectOptionsButtons {
   display: flex;
   flex-direction: row;
