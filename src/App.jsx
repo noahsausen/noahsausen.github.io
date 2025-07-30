@@ -64,14 +64,14 @@ function Skills(){
       <h3>Skills</h3>
       <p>React</p>
       <p>Express</p>
-      <p>JavaScript</p>
+      <p>JS / Node.js</p>
       <p>HTML</p>
       <p>CSS</p>
       <p>Java</p>
       <p>Python</p>
-      <a href="https://jellyfishbbhs.com/"><p>Robotics</p></a>
+      <a href="https://jellyfishbbhs.com/">Robotics</a>
       <p>Sound Engineering</p>
-      <a href="https://flipper.net"><p>Pentesting</p></a>
+      <a href="https://flipper.net">Pentesting</a>
     </div>
   );
 }
