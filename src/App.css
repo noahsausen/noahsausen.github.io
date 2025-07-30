@@ -137,19 +137,10 @@ body, html, #root {
   background-size: contain;
 }
 
-.fade-element {
+.ProjectOptions {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.fade-element.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.ProjectOptions {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   width: 8.7em;
   height: 4.9em;
   border-radius: 1.3em;
@@ -158,6 +149,12 @@ body, html, #root {
   align-items: center;
   justify-content: center;
   gap: 0.5em;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.ProjectOptions.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .ProjectOptions p {
@@ -177,7 +174,13 @@ body, html, #root {
   text-decoration: none;
   color: hsl(0, 0%, 90%);
   padding: 0.3em 0.6em;
-  background-color: hsl(0, 0%, 15%);
+  background: rgba(50, 50, 50, 0.3);
+  backdrop-filter: blur(5px) saturate(180%);
+  border: none;
+  border-top: 1px solid rgba(100, 100, 100, 0.8);
+  border-bottom: 1px solid rgba(80, 80, 80, 0.8);
+  box-shadow: 0 0px 32px rgba(100, 100, 100, 0.2),
+  inset 0 4px 20px rgba(100, 100, 100, 0.3);
   border-radius: 2em;
 }
 

@@ -114,7 +114,7 @@ function Project({name, thumbnail, urlApp, urlCode}) {
 
   return (
     <div className="Project" style={{backgroundImage: `url(${thumbnail})`,}} onClick={() => setVisible(!visible)} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-      <div className={`ProjectOptions fade-element ${visible ? "visible" : ""}`} id={name + "Options"}>
+      <div className={`ProjectOptions ${visible ? "visible" : ""}`} id={name + "Options"}>
         <p>{name}</p>
         <div className="ProjectOptionsButtons">
           <a href={urlApp} target="_blank" rel="noopener noreferrer">App</a>
