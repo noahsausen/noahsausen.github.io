@@ -26,7 +26,7 @@ html, body, #root {
   align-items: start;
 }
 
-.heading {
+#heading {
   font-family: "Press Start 2P", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -39,6 +39,12 @@ html, body, #root {
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
+}
+
+hr {
+  height: 0.3em;
+  background-color: transparent;
+  border: none;
 }
 
 a {

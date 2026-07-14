@@ -11,64 +11,76 @@ import remarksThumb from "./assets/remarks.png";
 export default function App() {
   return (
       <main className="app">
-        <Prompt/>
-        <Heading/>
-        <Bio/>
-        <WhatIDo/>
-        <Languages/>
-        <Connect/>
-        <Footer/>
+          <Prompt>whoami</Prompt>
+          <h1 id="heading">Noah Sausen</h1>
+          <Bio/>
+          <Experience/>
+          {/*<Languages/>*/}
+          {/*<Connect/>*/}
+          {/*<Footer/>*/}
       </main>
   );
 }
 
-function Prompt() {
-  return (
-      <p className="terminal">hello@web ~ % whoami</p>
-  )
+
+// REUSABLE COMPONENTS ↓ -------------- ↓ -------------- ↓
+function Prompt({children}) {
+    return (
+        <p className="terminal">guest@home ~ % {children}</p>
+    )
 }
 
-function Heading() {
-  return (
-      <h1 className="heading">Noah Sausen</h1>
-  )
+function Terminal({children}) {
+    return (
+        <p className="terminal">{children}</p>
+    )
 }
 
+function Link({href, children}) {
+    return (
+        <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+    );
+}
+
+
+// PAGE SECTIONS ↓ -------------- ↓ -------------- ↓
 function Bio() {
   return (
-      <p className="terminal">I'm a high school student in Rye Brook, NY aspiring to be a software engineer.
-        I'm also interested in live sound and <a href="https://flipper.net" target="_blank" rel="noopener noreferrer">pentesting</a>.</p>
+      <Terminal>I'm a high school student in New York building robots, websites, and software.
+          I'm also interested in live sound and <Link href="https://flipper.net">pentesting</Link>.</Terminal>
   );
 }
 
-function WhatIDo() {
+function Experience() {
   return (
-      <div className="terminal">
-        <p>hello@web ~ % ls <b>experience</b></p>
-        <p>SummerTech/</p>
-        <p>├── Coding Teacher</p>
-        <p>└── <mark>CIT Summer 2026</mark></p>
-        {/*<p><b>What I Do</b></p>*/}
-        {/*<ul>*/}
-        {/*    <li><mark>Currently: Coding Teacher @ <a href="https://www.summertech.net" target="_blank" rel="noopener noreferrer">SummerTech</a></mark></li>*/}
-        {/*    <li>Softwar4e Officer @ <a href="https://jellyfishbbhs.com" target="_blank" rel="noopener noreferrer">FTC Team 4654 Jellyfish</a></li>*/}
-        {/*    <li>Sound Designer @ <a href="https://www.instagram.com/bbhstheater" target="_blank" rel="noopener noreferrer">BBHS Theatre</a></li>*/}
-        {/*</ul>*/}
-      </div>
+      <Terminal>
+          <Prompt><b>experience</b></Prompt>
+          <hr/>
+          <Link href="https://www.summertech.net">SummerTech</Link>
+          <p>├─ Coding Teacher</p>
+          <p>└─ <mark>Counselor-in-Training (2026)</mark></p>
+          <hr/>
+          <Link href="https://jellyfishbbhs.com">FTC Team 4654 Jellyfish</Link>
+          <p>├─ Software Officer (26-27)</p>
+          <p>└─ Team Member (since 2024)</p>
+          <hr/>
+          <Link href="https://www.instagram.com/bbhstheater">BBHS Theatre</Link>
+          <p>└─ Sound Designer / Engineer</p>
+      </Terminal>
   )
 }
 
 function Languages() {
   return (
       <div className="terminal">
-        <p>hello@web ~ % ls <b>skills</b></p>
-        <ul>
-          <li>Java + FTC RobotCore</li>
-          <li>Python</li>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-        </ul>
+          <p>hello@web ~ % ls <b>skills</b></p>
+          <ul>
+              <li>Java + FTC RobotCore</li>
+              <li>Python</li>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+          </ul>
       </div>
   )
 }
@@ -76,24 +88,18 @@ function Languages() {
 function Connect() {
   return (
       <div className="ModularBlock Connect">
-        <h3>Connect</h3>
-        <div className="LinkContainer">
-          <div className="LinkContainer">
-            <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>
-            <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>
-          </div>
-          <div className="LinkContainer">
-            <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>
-            <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>
-          </div>
-        </div>
+        {/*<h3>Connect</h3>*/}
+        {/*<div className="LinkContainer">*/}
+        {/*  <div className="LinkContainer">*/}
+        {/*    <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>*/}
+        {/*    <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>*/}
+        {/*  </div>*/}
+        {/*  <div className="LinkContainer">*/}
+        {/*    <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>*/}
+        {/*    <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
-  );
-}
-
-function Link({iconFile, url, name, extraClass=""}) {
-  return (
-      <a href={url} target="_blank" rel="noopener noreferrer"><img className={"LinkIcon" + extraClass} src={iconFile} alt={name + " logo"}/></a>
   );
 }
 
