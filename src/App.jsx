@@ -57,15 +57,16 @@ function Experience() {
           <Prompt><b>experience</b></Prompt>
           <hr/>
           <Link href="https://www.summertech.net">SummerTech</Link>
-          <p>├─ Coding Teacher</p>
-          <p>└─ <mark>Counselor-in-Training (2026)</mark></p>
+          <p>├─ <mark>Counselor-in-Training (2026)</mark></p>
+          <p>└─ Coding Teacher</p>
           <hr/>
           <Link href="https://jellyfishbbhs.com">FTC Team 4654 Jellyfish</Link>
           <p>├─ Software Officer (26-27)</p>
-          <p>└─ Team Member (since 2024)</p>
+          <p>└─ Programmer</p>
           <hr/>
           <Link href="https://www.instagram.com/bbhstheater">BBHS Theatre</Link>
-          <p>└─ Sound Designer / Engineer</p>
+          <p>├─ Sound Designer / Engineer</p>
+          <p>└─ Tech Crew</p>
       </Terminal>
   )
 }

@@ -4,6 +4,8 @@
 
 html, body, #root {
   background: hsl(0, 0%, 5%);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 * {
@@ -20,6 +22,7 @@ html, body, #root {
   flex-direction: column;
   text-align: left;
   text-wrap: pretty;
+  font-size: 1rem;
   color: hsl(0, 0%, 95%);
   gap: 1.5em;
   justify-content: start;
