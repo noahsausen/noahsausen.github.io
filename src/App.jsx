@@ -15,8 +15,9 @@ export default function App() {
           <h1 id="heading">Noah Sausen</h1>
           <Bio/>
           <Experience/>
-          <Skills/>
-          {/*<Connect/>*/}
+          <Stack/>
+          <Projects/>
+          <Contact/>
           {/*<Footer/>*/}
       </main>
   );
@@ -40,6 +41,12 @@ function Link({href, children}) {
     return (
         <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
     );
+}
+
+function LinkIcon({href, iconFile, children}) {
+    return (
+        <a href={href} target="_blank" rel="noopener noreferrer"><img src={iconFile} alt={children} title={children} className="link-icon"/></a>
+    )
 }
 
 
@@ -70,10 +77,10 @@ function Experience() {
   )
 }
 
-function Skills() {
+function Stack() {
   return (
       <Terminal>
-          <Prompt><b>skills</b></Prompt>
+          <Prompt><b>stack</b></Prompt>
           <hr/>
           <p>Languages</p>
           <p>├─ Java</p>
@@ -85,7 +92,7 @@ function Skills() {
           <p>├─ FTC RobotCore</p>
           <p>└─ React</p>
           <hr/>
-          <p>Other</p>
+          <p>Tools</p>
           <p>├─ Git</p>
           <p>├─ JetBrains IDEs</p>
           <p>└─ Windows/MacOS/Linux</p>
@@ -93,47 +100,29 @@ function Skills() {
   )
 }
 
-function Connect() {
-  return (
-      <div className="ModularBlock Connect">
-        {/*<h3>Connect</h3>*/}
-        {/*<div className="LinkContainer">*/}
-        {/*  <div className="LinkContainer">*/}
-        {/*    <Link iconFile={githubIcon} url="https://github.com/noahsausen" name="Github"/>*/}
-        {/*    <Link iconFile={emailIcon} url="mailto:noahsausen@gmail.com" name="Email" extraClass=" emailPadding"/>*/}
-        {/*  </div>*/}
-        {/*  <div className="LinkContainer">*/}
-        {/*    <Link iconFile={instagramIcon} url="https://www.instagram.com/noahsausen" name="Instagram"/>*/}
-        {/*    <Link iconFile={discordIcon} url="https://discord.com/users/990740976043704370" name="Discord"/>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-      </div>
-  );
-}
-
 function Projects() {
   return (
-      <div className="ModularBlock Projects">
-        <h3>Projects</h3>
-        <Project name="Remarks" thumbnail={remarksThumb} urlApp="https://remarks-app.vercel.app" urlCode="https://github.com/noahsausen/Remarks"/>
-      </div>
+      <Terminal>
+          <Prompt><b>projects</b></Prompt>
+          <hr/>
+          <Link href="https://remarks-app.vercel.app">Remarks</Link>
+          <p>└─ A simple text-based social media service, built with a React frontend, Express backend, MongoDB Atlas, and JWT.</p>
+      </Terminal>
   );
 }
 
-function Project({name, thumbnail, urlApp, urlCode}) {
-  const [visible, setVisible] = useState(true);
-
-  return (
-      <div className="Project" style={{backgroundImage: `url(${thumbnail})`,}} onClick={() => setVisible(!visible)} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-        <div className={`ProjectOptions ${visible ? "visible" : ""}`} id={name + "Options"}>
-          <p>{name}</p>
-          <div className="ProjectOptionsButtons">
-            <a href={urlApp} target="_blank" rel="noopener noreferrer">App</a>
-            <a href={urlCode} target="_blank" rel="noopener noreferrer">Code</a>
-          </div>
+function Contact() {
+    return (
+        <div>
+            <Prompt><b>contact</b></Prompt>
+            <div id="contact">
+                <LinkIcon iconFile={githubIcon} href="https://github.com/noahsausen">GitHub</LinkIcon>
+                <LinkIcon iconFile={emailIcon} href="mailto:noahsausen@gmail.com">Email</LinkIcon>
+                <LinkIcon iconFile={instagramIcon} href="https://www.instagram.com/noahsausen">Instagram</LinkIcon>
+                <LinkIcon iconFile={discordIcon} href="https://discord.com/users/990740976043704370">Discord</LinkIcon>
+            </div>
         </div>
-      </div>
-  );
+    );
 }
 
 function Footer() {
