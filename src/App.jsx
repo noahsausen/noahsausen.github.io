@@ -1,12 +1,9 @@
 import './App.css';
-import { useState } from "react";
 
 import githubIcon from "./assets/github.svg";
 import emailIcon from "./assets/email.svg";
 import instagramIcon from "./assets/instagram.svg";
 import discordIcon from "./assets/discord.svg";
-
-import remarksThumb from "./assets/remarks.png";
 
 export default function App() {
   return (
@@ -18,7 +15,6 @@ export default function App() {
           <Stack/>
           <Projects/>
           <Contact/>
-          {/*<Footer/>*/}
       </main>
   );
 }
@@ -125,8 +121,8 @@ function Contact() {
     );
 }
 
-function Footer() {
-  return (
-      <p className="Footer">&copy; {new Date().getFullYear()} Noah Sausen &bull; Built with React</p>
-  );
-}
+// function Footer() {
+//   return (
+//       <p className="Footer">&copy; {new Date().getFullYear()} Noah Sausen &bull; Built with React</p>
+//   );
+// }
