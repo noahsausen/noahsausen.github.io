@@ -69,6 +69,11 @@ b {
   font-weight: 800;
 }
 
+small {
+  font-size: inherit;
+  font-weight: 100;
+}
+
 .Connect {
   display: flex;
   flex-direction: column;

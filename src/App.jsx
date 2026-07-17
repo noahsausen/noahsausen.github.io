@@ -15,7 +15,7 @@ export default function App() {
           <h1 id="heading">Noah Sausen</h1>
           <Bio/>
           <Experience/>
-          {/*<Languages/>*/}
+          <Skills/>
           {/*<Connect/>*/}
           {/*<Footer/>*/}
       </main>
@@ -26,7 +26,7 @@ export default function App() {
 // REUSABLE COMPONENTS ↓ -------------- ↓ -------------- ↓
 function Prompt({children}) {
     return (
-        <p className="terminal">guest@home ~ % {children}</p>
+        <p className="terminal"><small>guest@home ~ %</small> {children}</p>
     )
 }
 
@@ -65,24 +65,31 @@ function Experience() {
           <p>└─ Programmer</p>
           <hr/>
           <Link href="https://www.instagram.com/bbhstheater">BBHS Theatre</Link>
-          <p>├─ Sound Designer / Engineer</p>
-          <p>└─ Tech Crew</p>
+          <p>└─ Sound Designer / Technician</p>
       </Terminal>
   )
 }
 
-function Languages() {
+function Skills() {
   return (
-      <div className="terminal">
-          <p>hello@web ~ % ls <b>skills</b></p>
-          <ul>
-              <li>Java + FTC RobotCore</li>
-              <li>Python</li>
-              <li>HTML/CSS</li>
-              <li>JavaScript</li>
-              <li>React</li>
-          </ul>
-      </div>
+      <Terminal>
+          <Prompt><b>skills</b></Prompt>
+          <hr/>
+          <p>Languages</p>
+          <p>├─ Java</p>
+          <p>├─ Python</p>
+          <p>├─ JavaScript</p>
+          <p>└─ HTML/CSS</p>
+          <hr/>
+          <p>Frameworks</p>
+          <p>├─ FTC RobotCore</p>
+          <p>└─ React</p>
+          <hr/>
+          <p>Other</p>
+          <p>├─ Git</p>
+          <p>├─ JetBrains IDEs</p>
+          <p>└─ Windows/MacOS/Linux</p>
+      </Terminal>
   )
 }
 
