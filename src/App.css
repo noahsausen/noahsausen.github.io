@@ -14,7 +14,7 @@ html, body, #root {
   box-sizing: border-box;
 }
 
-.app {
+#app {
   min-height: 100vh;
   min-width: 100vw;
   padding: 2em;
@@ -90,85 +90,7 @@ small {
   width: 2em;
 }
 
-.emailPadding {
-  height: 1.6em;
-}
-
-.Projects {
-  display: flex;
-  flex-direction: column;
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2em;
-  background-color: hsl(0, 0%, 10%);
-  padding: 0.8em;
-  border-radius: 2em;
-  text-wrap: nowrap;
-  gap: 0.6em;
-}
-
-.Projects h3 {
-  font-size: 1.4em;
-  line-height: 0.8;
-}
-
-.Project  {
-  width: 8.7em;
-  height: 4.9em;
-  border-radius: 1.3em;
-  background-size: contain;
-}
-
-.ProjectOptions {
-  opacity: 0;
-  visibility: hidden;
-  backdrop-filter: blur(10px);
-  width: 8.7em;
-  height: 4.9em;
-  border-radius: 1.3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4em;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.ProjectOptions.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.ProjectOptions p {
-  font-size: 1.21em;
-}
-
-.ProjectOptionsButtons {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 0.22em;
-}
-
-.ProjectOptionsButtons a {
-  text-decoration: none;
-  color: hsl(0, 0%, 90%);
-  padding: 0.3em 0.6em;
-  background: rgba(50, 50, 50, 0.3);
-  backdrop-filter: blur(5px) saturate(180%);
-  border: none;
-  border-top: 1px solid rgba(100, 100, 100, 0.8);
-  border-bottom: 1px solid rgba(80, 80, 80, 0.8);
-  box-shadow: 0 0 32px rgba(100, 100, 100, 0.2),
-  inset 0 4px 20px rgba(100, 100, 100, 0.3);
-  border-radius: 2em;
-}
-
-.Footer {
+#footer {
   position: fixed;
   bottom: 0;
   left: 0;

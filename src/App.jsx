@@ -7,7 +7,7 @@ import discordIcon from "./assets/discord.svg";
 
 export default function App() {
   return (
-      <main className="app">
+      <main id="app">
           <Prompt>whoami</Prompt>
           <h1 id="heading">Noah Sausen</h1>
           <Bio/>
@@ -123,6 +123,6 @@ function Contact() {
 
 // function Footer() {
 //   return (
-//       <p className="Footer">&copy; {new Date().getFullYear()} Noah Sausen &bull; Built with React</p>
+//       <p id="footer">&copy; {new Date().getFullYear()} Noah Sausen &bull; Built with React</p>
 //   );
 // }
