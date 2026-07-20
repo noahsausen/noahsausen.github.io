@@ -9,7 +9,7 @@ export default function App() {
   return (
       <main id="app">
           <Prompt>whoami</Prompt>
-          <h1 id="heading">Noah Sausen</h1>
+          <h1 id="name">Noah Sausen</h1>
           <Bio/>
           <Experience/>
           <Stack/>
