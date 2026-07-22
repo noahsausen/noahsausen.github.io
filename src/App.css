@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap'); /* body */
 
 html, body, #root {
-  background: hsl(0, 0%, 5%);
+  background: hsl(0 0% 5%);
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -14,34 +14,64 @@ html, body, #root {
   box-sizing: border-box;
 }
 
-#app {
+#root {
   min-height: 100vh;
   min-width: 100vw;
   padding: 2em;
+
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5em;
+
+  color: hsl(0 0% 95%);
   text-align: left;
   text-wrap: pretty;
   font-size: 1rem;
-  color: hsl(0, 0%, 95%);
-  gap: 1.5em;
-  justify-content: start;
-  align-items: start;
+  line-height: 1.5;
+
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+#loader span {
+  width: 11.5em;
 }
 
 #name {
   font-family: "Press Start 2P", sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.2;
+  margin: 1.3rem 0;
 }
 
-.terminal {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.5;
+.cursor-block {
+  position: relative;
+  top: -2px;
+  color: hsl(0 0% 60%);
+}
+
+.cursor-hidden .ti-cursor {
+  display: none !important;
+  opacity: 0 !important;
+  animation: none !important;
 }
 
 hr {
@@ -51,18 +81,25 @@ hr {
 }
 
 a {
-  text-decoration: none;
-  color: hsl(0, 0%, 95%);
+  color: hsl(0 0% 95%);
+  text-decoration: underline dotted;
+  text-decoration-color: hsl(0 0% 50%);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition: all ease 0.2s;
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: hsl(0 0% 95%);
+  text-decoration-thickness: unset;
+  text-underline-offset: unset;
 }
 
 mark, mark a {
   font-weight: 600;
-  background-color: hsl(0, 0%, 95%);
-  color: hsl(0, 0%, 5%);
+  background-color: hsl(0 0% 95%);
+  color: hsl(0 0% 5%);
 }
 
 b {
@@ -72,7 +109,7 @@ b {
 small {
   font-size: inherit;
   font-weight: 200;
-  color: hsl(0, 0%, 60%);
+  color: hsl(0 0% 60%);
 }
 
 #contact {
@@ -83,9 +120,10 @@ small {
   align-items: center;
   justify-content: left;
   flex-wrap: wrap;
+  line-height: 0;
 }
 
-.link-icon {
+#contact img {
   height: auto;
   width: 2em;
 }
