@@ -30,7 +30,7 @@ export default function App() {
 // REUSABLE COMPONENTS ↓ -------------- ↓ -------------- ↓
 function Terminal({children, command, typeDelay, preTypeDelay, postTypeDelay, showFull, showOutput, setShowOutput}) {
     return showFull ? (
-        <div className={showOutput ? "cursor-hidden" : ""}>
+        <section className={showOutput ? "cursor-hidden" : ""}>
             <p><small>guest@home ~ %</small> <b><TypeIt options={{
                 speed: typeDelay,
                 lifeLike: true,
@@ -40,7 +40,7 @@ function Terminal({children, command, typeDelay, preTypeDelay, postTypeDelay, sh
                 afterComplete: () => setTimeout(() => setShowOutput(true), postTypeDelay)
             }}>{command}</TypeIt></b></p>
             {showOutput ? children : null}
-        </div>
+        </section>
     ) : null
 }
 
