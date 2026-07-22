@@ -15,7 +15,7 @@ export default function App() {
     const [show4, setShow4] = useState(false);
     const [show5, setShow5] = useState(false);
     const [show6, setShow6] = useState(false);
-    
+
     return ( <>
         <Loader hide={show1} setHide={setShow1} />
         <Whoami showFull={show1} showOutput={show2} setShowOutput={setShow2}/>
@@ -31,14 +31,14 @@ export default function App() {
 function Terminal({children, command, typeDelay, preTypeDelay, postTypeDelay, showFull, showOutput, setShowOutput}) {
     return showFull ? (
         <div className={showOutput ? "cursor-hidden" : ""}>
-            <p><small>guest@home ~ %</small> <TypeIt options={{
+            <p><small>guest@home ~ %</small> <b><TypeIt options={{
                 speed: typeDelay,
                 lifeLike: true,
                 cursor: true,
                 cursorChar: "<span class='cursor-block'>█</span>",
                 startDelay: preTypeDelay,
                 afterComplete: () => setTimeout(() => setShowOutput(true), postTypeDelay)
-            }}>{command}</TypeIt></p>
+            }}>{command}</TypeIt></b></p>
             {showOutput ? children : null}
         </div>
     ) : null
